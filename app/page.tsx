@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import HeroCanvas from "@/components/HeroCanvas";
 import Footer from "@/components/Footer";
@@ -180,16 +180,16 @@ const steps: Step[] = [
 // ─────────────────────────────────────────
 // Framer Motion variants
 // ─────────────────────────────────────────
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: (delay: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay },
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as unknown as any, delay },
   }),
 };
 
-const fadeIn = {
+const fadeIn: Variants = {
   hidden: { opacity: 0 },
   visible: (delay: number) => ({
     opacity: 1,
